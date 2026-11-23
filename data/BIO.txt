@@ -1,0 +1,23 @@
+Genome indexing structures such as FM-indexes and k-mer indexes speed up read search and alignment by mapping short sequence substrings to reference positions.
+
+DNA sequencing determines nucleotide order along strands, producing reads that require assembly, error correction, and alignment against reference sequences.
+
+Sequence alignment scores nucleotide or protein matches, gaps, and substitutions to measure sequence similarity, homology, and evolutionary relationships.
+
+K-mer indexing and hashing break biological sequences into fixed-length substrings so approximate matching and lookup filter candidate hits rapidly.
+
+RNA sequencing measures gene expression and transcript isoform abundance across samples, requiring read alignment, counting, and normalization.
+
+Phylogenetic trees represent evolutionary branching and sequence divergence among species or gene families inferred from aligned molecular sequences.
+
+Metabolic network and pathway analysis models reaction graphs and flux balance to understand cellular metabolism and regulation.
+
+Motif search and pattern matching scan biological sequences for conserved regulatory or binding motifs using position weight matrices and index structures.
+
+De novo sequence assembly reconstructs longer contiguous sequences from overlapping reads using de Bruijn graphs and sequence overlap paths.
+
+Variant calling identifies single-nucleotide changes and indels from aligned sequencing reads compared against a reference genome.
+
+Protein structure comparison and alignment evaluate 3D folding similarity and conserved domains across related biological sequences.
+
+Single-cell sequencing profiles expression across individual cells, using dimensionality reduction and nearest-neighbor graphs to cluster cell states.
