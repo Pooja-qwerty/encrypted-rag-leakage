@@ -1,7 +1,7 @@
 """
-Game IND-QT-PS (Query-Topic, Passive Server): scaled-down 2-topic version.
-Threat model: malicious encrypted-RAG server, honest users, public auxiliary corpus.
-The server cannot probe the DB — it only sees fetch logs.
+Game IND-QT-PS: plaintext baseline with extra attacker knowledge.
+Calibration uses private plaintext embeddings and a public corpus.
+For the restricted log-only attack, use log_attack.py.
 """
 
 from pathlib import Path
@@ -113,9 +113,9 @@ def build_public_corpus(public_raw, embed_fn):
 
 def public_calibrate(db, public_corpus, noise_std=0.0, seed=0):
     """
-    Passive calibrate: adversary maps each private chunk ID to a topic using
-    only the public corpus. `noise_std` simulates imperfect knowledge of
-    private chunk embeddings.
+    Extra-knowledge baseline: compare private plaintext embeddings to public
+    embeddings. `noise_std` perturbs that private information. This is not
+    available to the restricted log-only attacker.
     """
     rng = np.random.default_rng(seed)
     priv_vecs = np.asarray(db["vectors"], dtype=float)
@@ -189,8 +189,7 @@ def play_qt_ps_trial(db, public_corpus, cs_pool, bio_pool, q_vecs,
                      n_repeats=1, seed=0):
     """
     One Left trial and one Right trial with freshly sampled queries.
-    `n_repeats` > 1 gives the classifier multiple observations of the same
-    query — needed for AP+SP to carry any signal beyond AP-ordered.
+    Repeats give identical votes; this classifier does not use repeat tokens.
     Map is computed per-trial using this trial's seed (averages over map noise).
     """
     rng = np.random.default_rng(seed)
@@ -238,6 +237,7 @@ def estimate_qt_ps_advantage(db, public_corpus, cs_pool, bio_pool, q_vecs,
 # ---------------------------------------------------------------------------
 
 def main():
+    print("Extra-knowledge plaintext baseline: calibration reads private embeddings.\n")
     cs_priv = load_file("data/CS.txt")
     bio_priv = load_file("data/BIO.txt")
     cs_pub  = load_file("data/CS_public.txt")
