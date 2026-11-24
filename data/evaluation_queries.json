@@ -1,0 +1,432 @@
+{
+  "name": "synthetic-cs-bio-evaluation-v1",
+  "judgments": "Author-defined binary relevance: listed chunks answer the question; others are treated as nonrelevant. Team review pending. Two authored questions per source chunk; not independent real-user queries.",
+  "corpus_sha256": {
+    "data/CS.txt": "e54bf620d1efbdf816622ef022a7b7df8cf818783f82ec615b4f14f91c978bd3",
+    "data/BIO.txt": "0baafbbadf785fd99f7f70d13909996bf12611d5b13ed381831abe1a7efd8bad"
+  },
+  "context": [
+    "Database B-tree and hash indexes reduce sequential scans",
+    "Diff tools align edited strings to locate insertions and substitutions",
+    "Tries and tree structures organize hierarchical keys",
+    "Depth first and breadth first graph algorithms explore nodes",
+    "CPU pipeline hazards and instruction dependencies",
+    "SQL query plans choose scans joins and sorts",
+    "Buffer management caches frequently used database pages",
+    "Distributed event logs record causal update ordering",
+    "Inverted indexes map terms to posting lists and positions",
+    "Bloom filters and sketches approximate membership and counts",
+    "Dynamic programming stores sequence comparison subproblem scores",
+    "Clustered and secondary indexes exchange write cost for read speed",
+    "FM indexes map genome read substrings to references",
+    "DNA nucleotide sequencing produces reads for alignment",
+    "Protein and nucleotide alignment scores gaps and homology",
+    "Biological k-mer hashing filters matching sequence candidates",
+    "RNA transcript abundance from normalized sequencing counts",
+    "Phylogenetic branching estimates gene and species evolution",
+    "Metabolic reaction networks and cellular flux balance",
+    "DNA regulatory motif matching using position weight matrices",
+    "De Bruijn graph assembly combines overlapping genome reads",
+    "Variant calling compares reads with a reference genome",
+    "Protein folding and conserved three dimensional structural domains",
+    "Single cell expression clustering with nearest neighbor graphs"
+  ],
+  "challenges": [
+    {
+      "id": "cs_00_0",
+      "topic": "CS",
+      "text": "Why does a database index avoid scanning an entire relation?",
+      "relevant": [
+        "CS:0",
+        "CS:11"
+      ]
+    },
+    {
+      "id": "cs_00_1",
+      "topic": "CS",
+      "text": "How can an auxiliary index reduce disk blocks read during a lookup?",
+      "relevant": [
+        "CS:0",
+        "CS:11"
+      ]
+    },
+    {
+      "id": "cs_01_0",
+      "topic": "CS",
+      "text": "How can a diff program find insertions between two versions of a file?",
+      "relevant": [
+        "CS:1",
+        "CS:10"
+      ]
+    },
+    {
+      "id": "cs_01_1",
+      "topic": "CS",
+      "text": "What information does alignment provide when comparing edited strings?",
+      "relevant": [
+        "CS:1",
+        "CS:10"
+      ]
+    },
+    {
+      "id": "cs_02_0",
+      "topic": "CS",
+      "text": "Which hierarchical structures support efficient range queries over keys?",
+      "relevant": [
+        "CS:2"
+      ]
+    },
+    {
+      "id": "cs_02_1",
+      "topic": "CS",
+      "text": "Why might a trie organize keys by their shared prefixes?",
+      "relevant": [
+        "CS:2"
+      ]
+    },
+    {
+      "id": "cs_03_0",
+      "topic": "CS",
+      "text": "How would breadth-first search explore a dependency network?",
+      "relevant": [
+        "CS:3"
+      ]
+    },
+    {
+      "id": "cs_03_1",
+      "topic": "CS",
+      "text": "What is the difference between exploring graph paths by depth and by breadth?",
+      "relevant": [
+        "CS:3"
+      ]
+    },
+    {
+      "id": "cs_04_0",
+      "topic": "CS",
+      "text": "Why must processor pipelines resolve hazards between dependent instructions?",
+      "relevant": [
+        "CS:4"
+      ]
+    },
+    {
+      "id": "cs_04_1",
+      "topic": "CS",
+      "text": "How does ordering CPU operations preserve the intended program state?",
+      "relevant": [
+        "CS:4"
+      ]
+    },
+    {
+      "id": "cs_05_0",
+      "topic": "CS",
+      "text": "How can choosing a hash join change a database execution plan?",
+      "relevant": [
+        "CS:5"
+      ]
+    },
+    {
+      "id": "cs_05_1",
+      "topic": "CS",
+      "text": "Why compare index scans and merge joins before executing a SQL query?",
+      "relevant": [
+        "CS:5"
+      ]
+    },
+    {
+      "id": "cs_06_0",
+      "topic": "CS",
+      "text": "Why retain frequently requested records in a buffer pool?",
+      "relevant": [
+        "CS:6"
+      ]
+    },
+    {
+      "id": "cs_06_1",
+      "topic": "CS",
+      "text": "How does caching database blocks reduce repeated lookup time?",
+      "relevant": [
+        "CS:6"
+      ]
+    },
+    {
+      "id": "cs_07_0",
+      "topic": "CS",
+      "text": "Why do distributed recovery logs need a consistent event order?",
+      "relevant": [
+        "CS:7"
+      ]
+    },
+    {
+      "id": "cs_07_1",
+      "topic": "CS",
+      "text": "How can causal ordering help concurrent updates survive a failure?",
+      "relevant": [
+        "CS:7"
+      ]
+    },
+    {
+      "id": "cs_08_0",
+      "topic": "CS",
+      "text": "How do posting lists help a search engine find documents containing a term?",
+      "relevant": [
+        "CS:8"
+      ]
+    },
+    {
+      "id": "cs_08_1",
+      "topic": "CS",
+      "text": "Why store term positions in an inverted index for phrase queries?",
+      "relevant": [
+        "CS:8"
+      ]
+    },
+    {
+      "id": "cs_09_0",
+      "topic": "CS",
+      "text": "How can a Bloom filter test membership using little memory?",
+      "relevant": [
+        "CS:9"
+      ]
+    },
+    {
+      "id": "cs_09_1",
+      "topic": "CS",
+      "text": "What compact structures estimate event frequencies without keeping every record?",
+      "relevant": [
+        "CS:9"
+      ]
+    },
+    {
+      "id": "cs_10_0",
+      "topic": "CS",
+      "text": "Why store intermediate scores when comparing two sequences?",
+      "relevant": [
+        "CS:10"
+      ]
+    },
+    {
+      "id": "cs_10_1",
+      "topic": "CS",
+      "text": "How does dynamic programming avoid recomputing overlapping subproblems?",
+      "relevant": [
+        "CS:10"
+      ]
+    },
+    {
+      "id": "cs_11_0",
+      "topic": "CS",
+      "text": "Why can secondary database indexes make writes more expensive?",
+      "relevant": [
+        "CS:11"
+      ]
+    },
+    {
+      "id": "cs_11_1",
+      "topic": "CS",
+      "text": "What read and update trade-off comes with a clustered index?",
+      "relevant": [
+        "CS:11"
+      ]
+    },
+    {
+      "id": "bio_00_0",
+      "topic": "Bio",
+      "text": "How does an FM-index locate sequencing reads on a reference genome?",
+      "relevant": [
+        "Bio:0",
+        "Bio:3"
+      ]
+    },
+    {
+      "id": "bio_00_1",
+      "topic": "Bio",
+      "text": "Why build a genome index before searching for short DNA substrings?",
+      "relevant": [
+        "Bio:0",
+        "Bio:3"
+      ]
+    },
+    {
+      "id": "bio_01_0",
+      "topic": "Bio",
+      "text": "What does DNA sequencing reveal about the order of nucleotides?",
+      "relevant": [
+        "Bio:1",
+        "Bio:8"
+      ]
+    },
+    {
+      "id": "bio_01_1",
+      "topic": "Bio",
+      "text": "Why do newly sequenced DNA reads require correction and assembly?",
+      "relevant": [
+        "Bio:1",
+        "Bio:8"
+      ]
+    },
+    {
+      "id": "bio_02_0",
+      "topic": "Bio",
+      "text": "How do gaps and substitutions affect a protein alignment score?",
+      "relevant": [
+        "Bio:2"
+      ]
+    },
+    {
+      "id": "bio_02_1",
+      "topic": "Bio",
+      "text": "Why can aligned nucleotide sequences provide evidence of homology?",
+      "relevant": [
+        "Bio:2"
+      ]
+    },
+    {
+      "id": "bio_03_0",
+      "topic": "Bio",
+      "text": "How can hashing k-mers filter possible biological sequence matches?",
+      "relevant": [
+        "Bio:3",
+        "Bio:0"
+      ]
+    },
+    {
+      "id": "bio_03_1",
+      "topic": "Bio",
+      "text": "Why split DNA into fixed-length substrings before approximate read matching?",
+      "relevant": [
+        "Bio:3",
+        "Bio:0"
+      ]
+    },
+    {
+      "id": "bio_04_0",
+      "topic": "Bio",
+      "text": "How can RNA reads estimate gene expression levels?",
+      "relevant": [
+        "Bio:4"
+      ]
+    },
+    {
+      "id": "bio_04_1",
+      "topic": "Bio",
+      "text": "Why normalize transcript counts when comparing RNA sequencing samples?",
+      "relevant": [
+        "Bio:4"
+      ]
+    },
+    {
+      "id": "bio_05_0",
+      "topic": "Bio",
+      "text": "What do branches in a phylogenetic tree say about molecular evolution?",
+      "relevant": [
+        "Bio:5",
+        "Bio:2"
+      ]
+    },
+    {
+      "id": "bio_05_1",
+      "topic": "Bio",
+      "text": "How can aligned genes help infer ancestry between species?",
+      "relevant": [
+        "Bio:5",
+        "Bio:2"
+      ]
+    },
+    {
+      "id": "bio_06_0",
+      "topic": "Bio",
+      "text": "How does flux balance describe a cellular metabolic pathway?",
+      "relevant": [
+        "Bio:6"
+      ]
+    },
+    {
+      "id": "bio_06_1",
+      "topic": "Bio",
+      "text": "Why represent biochemical reactions as a network when studying metabolism?",
+      "relevant": [
+        "Bio:6"
+      ]
+    },
+    {
+      "id": "bio_07_0",
+      "topic": "Bio",
+      "text": "How does a position weight matrix find possible DNA binding sites?",
+      "relevant": [
+        "Bio:7"
+      ]
+    },
+    {
+      "id": "bio_07_1",
+      "topic": "Bio",
+      "text": "Why search for conserved regulatory motifs in biological sequences?",
+      "relevant": [
+        "Bio:7"
+      ]
+    },
+    {
+      "id": "bio_08_0",
+      "topic": "Bio",
+      "text": "How can a de Bruijn graph help assemble a genome from short reads?",
+      "relevant": [
+        "Bio:8"
+      ]
+    },
+    {
+      "id": "bio_08_1",
+      "topic": "Bio",
+      "text": "What do overlapping reads contribute to de novo sequence assembly?",
+      "relevant": [
+        "Bio:8"
+      ]
+    },
+    {
+      "id": "bio_09_0",
+      "topic": "Bio",
+      "text": "How are single-nucleotide variants found relative to a reference genome?",
+      "relevant": [
+        "Bio:9"
+      ]
+    },
+    {
+      "id": "bio_09_1",
+      "topic": "Bio",
+      "text": "Why compare aligned DNA reads to identify insertions and deletions?",
+      "relevant": [
+        "Bio:9"
+      ]
+    },
+    {
+      "id": "bio_10_0",
+      "topic": "Bio",
+      "text": "What can comparing protein folds reveal about conserved domains?",
+      "relevant": [
+        "Bio:10"
+      ]
+    },
+    {
+      "id": "bio_10_1",
+      "topic": "Bio",
+      "text": "Why compare three-dimensional structures of related proteins?",
+      "relevant": [
+        "Bio:10"
+      ]
+    },
+    {
+      "id": "bio_11_0",
+      "topic": "Bio",
+      "text": "How do single-cell expression profiles reveal distinct cell states?",
+      "relevant": [
+        "Bio:11"
+      ]
+    },
+    {
+      "id": "bio_11_1",
+      "topic": "Bio",
+      "text": "Why use nearest-neighbor graphs to cluster individual cells after sequencing?",
+      "relevant": [
+        "Bio:11"
+      ]
+    }
+  ]
+}

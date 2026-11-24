@@ -1,0 +1,3 @@
+numpy>=2.0
+scikit-learn>=1.5
+ironcore-alloy>=0.16

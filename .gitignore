@@ -218,3 +218,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- Project: local / reproducible outputs (regenerate with evaluate_*, defense_*, phase2_*) ---
+results/
+
+# macOS
+.DS_Store
