@@ -1,0 +1,23 @@
+Database indexing builds auxiliary structures like B-trees and hash indexes so search and lookup queries scan fewer blocks instead of reading every record sequentially.
+
+Sequence alignment in bioinformatics and diff tools compares ordered sequences or strings to find matching regions, insertions, deletions, and substitutions.
+
+Tree structures such as B-trees, tries, and decision trees organize hierarchical keys or features to support fast search, range lookup, and traversal.
+
+Graph traversal algorithms like breadth-first and depth-first search explore connected nodes and paths in networks, dependency graphs, and state spaces.
+
+Instruction sequencing in CPU pipelines orders dependent operations and resolves hazards so execution preserves program state and throughput.
+
+Query optimization evaluates execution plans using index scans, hash joins, and sort-merge operations to reduce search latency and memory overhead.
+
+Caching and buffer management keep frequently accessed blocks or records in fast memory to speed up repeated lookup and search operations.
+
+Event sequencing and log ordering track causal relationships across distributed nodes so concurrent updates remain consistent during recovery.
+
+Inverted indexing maps terms to posting lists and positions, enabling fast text search, phrase matching, and document retrieval across large collections.
+
+Probabilistic data structures like Bloom filters and sketches support fast membership and frequency queries with compact memory footprints.
+
+Dynamic programming solves overlapping subproblems and sequence comparison tasks by storing intermediate alignment or path scores in tables.
+
+Clustered and secondary indexing trade write overhead during updates for faster point and range lookups during read-heavy workloads.

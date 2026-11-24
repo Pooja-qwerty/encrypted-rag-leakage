@@ -1,0 +1,23 @@
+Reference genomes are preprocessed into compact substring indexes so short reads can be located quickly without full scans.
+
+Next-generation platforms produce short fragments from many molecules in parallel and rely on downstream processing to recover order.
+
+Global and local alignment algorithms score matches, mismatches, and affine gaps to quantify how closely two biological sequences correspond.
+
+Short subsequence hashing of reads allows seed-and-extend aligners to narrow candidate loci before doing full dynamic programming.
+
+Expression profiling by sequencing counts reads per transcript and normalises for length and library size to estimate abundance.
+
+Distance-based and character-based trees group taxa by shared derived traits inferred from aligned molecular characters.
+
+Reaction networks encode stoichiometry and constraints so flux distributions consistent with cellular physiology can be computed.
+
+Conserved sequence patterns are detected by scanning with position-specific weight matrices and statistical thresholds.
+
+Overlap-layout-consensus pipelines chain reads by their overlaps and resolve conflicts to build longer contiguous sequences.
+
+Aligned reads are scanned for mismatches and small indels relative to a reference to identify variants.
+
+Fold comparison aligns three-dimensional coordinates of related proteins to identify shared structural cores.
+
+Cell-by-cell expression matrices are reduced to low-dimensional representations and clustered to reveal distinct cell populations.

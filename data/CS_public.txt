@@ -1,0 +1,25 @@
+Database management systems create auxiliary lookup structures so query planners can skip full scans when the requested rows are sparse.
+
+Search engines build postings per term with positional data so phrase and proximity queries can be answered without rescanning documents.
+
+Hierarchical search trees keep keys sorted across nodes and rebalance on insert so point and range queries stay logarithmic.
+
+Connected graphs are explored by systematic visitation orders that mark nodes when first discovered and follow edges from the queue or stack.
+
+Processor front-ends decode multiple in-flight instructions and scoreboard dependencies to keep issue slots busy without stalling.
+
+Cost models estimate CPU, I/O, and selectivity for candidate plans and pick the plan with the smallest predicted total cost.
+
+Page caches keep recently accessed blocks in memory and evict by recency or frequency so repeated reads avoid the disk.
+
+Replication logs assign monotonic sequence numbers to mutations so followers can replay updates in a consistent order after recovery.
+
+Search indexes store per-term document lists with offsets so multi-word queries can be intersected cheaply at query time.
+
+Sketching data structures summarize large multisets with fixed-size counters so approximate counts and memberships can be answered in constant space.
+
+Overlapping subproblems in string comparison are solved by memoising partial edit distances in tabular form.
+
+Covering indexes attach extra columns so read-only queries can be answered from the index alone.
+
+Range-partitioned indexes split key space across shards so each shard answers a bounded subset of the query.
